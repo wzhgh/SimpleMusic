@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wzh.simplemusic.activity.SongListActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/back_btn_id"
+            android:src="@drawable/back_icon"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="音乐列表"
+            android:id="@+id/textView4"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/search_btn_id"
+            android:src="@drawable/search_icon"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/songlist_lv_id"
+            android:layout_gravity="left|top"
+            android:choiceMode="singleChoice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未搜索到任何歌曲"
+            android:id="@+id/textView5"
+            android:visibility="invisible"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.wzh.simplemusic.fragment.MusicPlayFragment"
+        android:id="@+id/fragment" />
+</LinearLayout>
